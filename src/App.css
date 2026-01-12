@@ -1,0 +1,125 @@
+/* RESET FEEL */
+* {
+  box-sizing: border-box;
+}
+
+.contact-section {
+  background: #f6f7fb;
+  padding: 80px 20px;
+  color: #121212;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  color: #6b6b6b;
+  font-size: 16px;
+}
+
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.contact-info h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.info-text {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.info-block strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.info-block p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.quick-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+}
+
+.quick-actions a {
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #121212;
+  color: #fff;
+}
+
+/* RIGHT CARD */
+.contact-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.contact-card h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.contact-card input,
+.contact-card select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.contact-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #ff5a5f;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* WHY */
+.why-vmt {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.why-vmt h3 {
+  margin-bottom: 10px;
+}
+
+.why-vmt p {
+  color: #6b6b6b;
+}
