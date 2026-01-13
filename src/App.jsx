@@ -6,6 +6,7 @@ import Founder from "./components/founder/Founder";
 import Process from "./components/process/Process";
 import Footer from "./components/footer/Footer";
 import PageLoader from "./components/loader/PageLoader";
+import FAQ from "./components/faq/FAQ";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,7 @@ export default function App() {
       <WhyChooseUs />
       <Founder />
       <Process />
+      <FAQ />
       <Footer />
     </>
   );

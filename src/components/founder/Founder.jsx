@@ -85,7 +85,7 @@ export default function Founder() {
 
           <motion.p variants={fadeUp}>
             Every client gets direct access to senior leadership. No junior
-            account managers, no cookie-cutter strategies—just proven methods
+            account managers, no cookie-cutter strategies just proven methods
             tailored to your unique goals.
           </motion.p>
 
