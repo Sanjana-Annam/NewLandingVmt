@@ -3,15 +3,14 @@
   max-width: 460px;
   padding: 36px;
   border-radius: 22px;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(26, 11, 46, 0.95),
-      rgba(2, 1, 10, 0.98)
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(26, 11, 46, 0.95),
+    rgba(2, 1, 10, 0.98)
+  );
   box-shadow:
-    0 40px 120px rgba(0,0,0,0.75),
-    inset 0 0 0 1px rgba(255,255,255,0.06);
+    0 40px 120px rgba(0, 0, 0, 0.75),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -29,62 +28,60 @@
   color: #cfd3ff;
 }
 
-/* INPUTS */
+/* INPUT & SELECT */
 .form-card input,
-/* ===== SELECT FIX ===== */
-
 .form-card select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  background-color: rgba(255,255,255,0.05);
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
-  cursor: pointer;
-
-  /* custom arrow */
-  background-image:
-    linear-gradient(45deg, transparent 50%, #b46cff 50%),
-    linear-gradient(135deg, #b46cff 50%, transparent 50%);
-  background-position:
-    calc(100% - 18px) 50%,
-    calc(100% - 12px) 50%;
-  background-size: 6px 6px;
-  background-repeat: no-repeat;
+  padding: 0 14px;
+  font-size: 14px;
+  transition: border 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Dropdown options */
-.form-card select option {
-  background-color: #02010a;
-  color: #ffffff;
-  padding: 12px;
-}
-
-/* Selected option */
-.form-card select option:checked {
-  background-color: #b46cff;
-  color: #ffffff;
-}
-
-/* Hovered option (Chrome/Edge/Firefox) */
-.form-card select option:hover {
-  background-color: #6f7bff;
-  color: #ffffff;
-}
-
-
+/* PLACEHOLDER */
 .form-card input::placeholder {
   color: #9aa2ff;
 }
 
+/* FOCUS */
 .form-card input:focus,
 .form-card select:focus {
   outline: none;
   border-color: #b46cff;
-  box-shadow: 0 0 0 3px rgba(180,108,255,0.35);
+  box-shadow: 0 0 0 3px rgba(180, 108, 255, 0.35);
 }
 
-/* ERROR */
+/* REMOVE DEFAULT SELECT STYLE */
+.form-card select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+  padding-right: 42px;
+}
+
+/* DROPDOWN OPTIONS */
+.form-card select option {
+  background-color: #0b0716;
+  color: #ffffff;
+}
+
+/* SELECTED OPTION */
+.form-card select option:checked {
+  background-color: #6f7bff;
+  color: #ffffff;
+}
+
+/* ERROR TEXT */
 .form-card span {
   font-size: 12px;
   color: #ff7a7a;
@@ -105,7 +102,7 @@
 
 .form-card button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(180,108,255,0.45);
+  box-shadow: 0 12px 32px rgba(180, 108, 255, 0.45);
 }
 
 /* FOOTNOTE */
@@ -118,7 +115,6 @@
 /* MOBILE */
 @media (max-width: 768px) {
   .form-card {
-    max-width: 100%;
     padding: 28px 22px;
   }
 
