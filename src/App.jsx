@@ -6,7 +6,7 @@ import Founder from "./components/founder/Founder";
 import Process from "./components/process/Process";
 import Footer from "./components/footer/Footer";
 import FAQ from "./components/faq/FAQ";
-import ThankYouPage from "./pages/ThankYouPage";
+import ThankYou from "./pages/ThankYou";
 
 function Home() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/thank-you" element={<ThankYouPage />} />
+      <Route path="/thank-you" element={<ThankYou />} />
     </Routes>
   );
 }
