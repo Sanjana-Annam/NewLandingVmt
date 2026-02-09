@@ -1,21 +1,28 @@
-/* GLOBAL RESET */
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ROOT */
+/* =========================
+   ROOT LAYOUT FIX
+========================= */
 html, body {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background: radial-gradient(
-    circle at top right,
-    #3b1d7a,
-    #05010d 60%
-  );
+  background: #02010a;   /* Solid base background */
   color: #ffffff;
+  overflow-x: hidden;    /* Prevent right white gap */
+}
+
+/* Ensure app fills screen */
+#root {
+  min-height: 100vh;
+  background: #02010a;
 }
 
 /* LINKS */
