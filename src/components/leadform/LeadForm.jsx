@@ -14,10 +14,10 @@ export default function LeadForm({ variant }) {
         <input type="hidden" name="_captcha" value="false" />
 
         {/* Redirect after submit */}
-              <input
+            <input
   type="hidden"
   name="_next"
-  value="http://localhost:5173/thank-you"
+  value="https://new-landing-vmt.vercel.app/thank-you"
 />
 
 
@@ -53,20 +53,28 @@ export default function LeadForm({ variant }) {
         />
 
         <select name="service" required>
-          <option value="">Select Service *</option>
-          <option value="Meta Ads">Meta Ads</option>
-          <option value="Google Ads">Google Ads</option>
-          <option value="Full Funnel">Full Funnel</option>
-          <option value="Branding">Branding</option>
-        </select>
+  <option value="">Select Service *</option>
+  <option value="Meta Ads">Meta Ads (Facebook & Instagram)</option>
+  <option value="Google Ads">Google Ads (Search & Display)</option>
+  <option value="SEO">Search Engine Optimization (SEO)</option>
+  <option value="Social Media Management">Social Media Management</option>
+  <option value="Personal Branding">Personal Branding</option>
+  <option value="LinkedIn Growth">LinkedIn Growth Strategy</option>
+  <option value="Website Development">Website Development</option>
+  <option value="Complete Performance Marketing">
+    Complete Performance Marketing (Full Funnel)
+  </option>
+</select>
+
 
         <select name="budget" required>
-          <option value="">Monthly Ad Budget *</option>
-          <option value="Under 50K">Under ₹50K</option>
-          <option value="50K-1L">₹50K–₹1L</option>
-          <option value="1L-5L">₹1L–₹5L</option>
-          <option value="5L+">₹5L+</option>
-        </select>
+  <option value="">Monthly Ad Budget *</option>
+  <option value="Below 25k">Below ₹25,000</option>
+  <option value="25k-50k">₹25,000 - ₹50,000</option>
+  <option value="50k-1L">₹50,000 - ₹1,00,000</option>
+  <option value="1L+">Above ₹1,00,000</option>
+</select>
+
 
         <button type="submit">
           Get Free Strategy Plan →
