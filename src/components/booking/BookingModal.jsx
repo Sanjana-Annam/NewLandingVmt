@@ -3,11 +3,17 @@ import "./BookingModal.css";
 export default function BookingModal({ isOpen, onClose, form }) {
   if (!isOpen) return null;
 
-  const bookingUrl =
-    "https://viralmarketingtrends.zohobookings.in/#/406960000000039054" +
-    `?customer_name=${encodeURIComponent(form.name)}` +
-    `&customer_email=${encodeURIComponent(form.email)}` +
-    `&customer_phone=${encodeURIComponent(form.phone)}`;
+  // IMPORTANT: Use proper Zoho service link without # before params
+  const bookingBase =
+    "https://viralmarketingtrends.zohobookings.in/portal-embed#/406960000000039054";
+
+  const params = new URLSearchParams({
+    customer_name: form.name || "",
+    customer_email: form.email || "",
+    customer_phone: form.phone || ""
+  });
+
+  const bookingUrl = `${bookingBase}?${params.toString()}`;
 
   return (
     <div className="booking-overlay">
@@ -21,6 +27,8 @@ export default function BookingModal({ isOpen, onClose, form }) {
           title="Book Consultation"
           frameBorder="0"
           allow="camera; microphone"
+          width="100%"
+          height="100%"
         />
       </div>
     </div>
