@@ -8,21 +8,25 @@
 }
 
 /* =========================
-   ROOT LAYOUT FIX
+   ROOT LAYOUT FIX - FIXES OVERFLOW
 ========================= */
 html, body {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background: #02010a;   /* Solid base background */
-  color: #ffffff;
-  overflow-x: hidden;    /* Prevent right white gap */
+  background: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* Ensure app fills screen */
 #root {
   min-height: 100vh;
-  background: #02010a;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 /* LINKS */
