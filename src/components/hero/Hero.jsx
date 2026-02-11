@@ -8,9 +8,9 @@ const container = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15
-    }
-  }
+      staggerChildren: 0.15,
+    },
+  },
 };
 
 const fadeUp = {
@@ -18,8 +18,8 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut" }
-  }
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
 };
 
 const fadeScale = {
@@ -27,27 +27,28 @@ const fadeScale = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.7, ease: "easeOut" }
-  }
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
 };
 
 export default function Hero() {
   return (
     <section className="hero">
-      {/* LOGO */}
-      <motion.img
-        src={logo}
-        alt="Viral Marketing Trends"
-        className="hero-logo"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      />
+      {/* TOP BAR (LOGO ONLY) */}
+      <div className="hero-top">
+        <motion.img
+          src={logo}
+          alt="Viral Marketing Trends"
+          className="hero-logo"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        />
+      </div>
 
       <div className="hero-inner">
-
         {/* =========================
-           MOBILE CTA (TOP PRIORITY)
+           MOBILE CTA
            ========================= */}
         <motion.div
           className="hero-form hero-form-mobile"
@@ -68,7 +69,7 @@ export default function Hero() {
           animate="visible"
         >
           <motion.span className="hero-badge" variants={fadeUp}>
-            ⚡ Performance-Driven Marketing
+            Performance-Driven Marketing
           </motion.span>
 
           <motion.h1 variants={fadeUp}>
@@ -82,14 +83,14 @@ export default function Hero() {
           </motion.p>
 
           <motion.ul className="hero-points" variants={container}>
-            <motion.li variants={fadeUp}>✔ ROI-focused growth</motion.li>
-            <motion.li variants={fadeUp}>✔ Full-service digital marketing</motion.li>
-            <motion.li variants={fadeUp}>✔ Transparent reporting</motion.li>
+            <motion.li variants={fadeUp}>ROI-focused growth</motion.li>
+            <motion.li variants={fadeUp}>Full-service digital marketing</motion.li>
+            <motion.li variants={fadeUp}>Transparent reporting</motion.li>
           </motion.ul>
         </motion.div>
 
         {/* =========================
-           DESKTOP CTA (RIGHT SIDE)
+           DESKTOP CTA
            ========================= */}
         <motion.div
           className="hero-form hero-form-desktop"
@@ -99,7 +100,6 @@ export default function Hero() {
         >
           <LeadForm variant="desktop" />
         </motion.div>
-
       </div>
     </section>
   );
